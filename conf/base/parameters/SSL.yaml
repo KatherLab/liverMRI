@@ -1,0 +1,38 @@
+# Adapted from https://github.com/facebookresearch/moco-v3
+args:
+  data: "data/02_intermediate/liver-pngs-SSL-train"
+  model_out_path: "data/06_models/"
+  batch_size: 128
+  arch: "vit_conv_base"
+  epochs: 2000
+  lr: 0.0001
+  optimizer: "adamw"
+  weight_decay: .1
+  warmup_epochs: 10
+  workers: 16
+  start_epoch: 0
+  momentum: 0.9
+  print_freq: 200
+  resume: ""
+  world_size: 1
+  rank: 0
+  dist_url: "tcp://localhost:23457"
+  dist_backend: "nccl"
+  multiprocessing_distributed: True
+
+  # moco specific configs:
+  moco_dim: 256
+  moco_mlp_dim: 4096
+  moco_m: 0.99
+  moco_m_cos: True
+  moco_t: 0.2
+
+  # vit specific configs 
+  stop_grad_conv1: True
+
+  # other upgrades
+  warmup_epochs: 30
+  crop_min: 0.15
+  image_size: 224 
+  seed: null
+  gpu: null

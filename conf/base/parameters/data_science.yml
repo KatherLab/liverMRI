@@ -1,0 +1,23 @@
+
+ext: "png"
+img_size: 224
+pic_path: "data/02_intermediate/liver-png-224"
+hps:
+  batch_size_gen: 512
+  batch_size: 2048
+  lr: 3e-4
+  cores: 12
+  num_folds: 5
+  es: 8
+  #model_path: "/mnt/bulk/timlenz/tumpe/RadiologyMLStation/radiologyml/data/06_models/pvt-moco-liver-0105.pth"   
+  #model_path: "/mnt/bulk/timlenz/tumpe/models/convnext-moco-liver.pth"
+  arch: "vit"
+  #model_path: "/mnt/bulk/timlenz/tumpe/models/maxvit_small-256-moco-liver-e1321.pth"
+  #model_path: "/mnt/bulk/timlenz/tumpe/models/vit_conv_base-224-moco-liver-e3157.pth"
+  feat_path: "data/03_primary"
+  model_path: '/path/to/model/vit_conv_base-224-moco-liver-e2000.pth'
+  #model_path: "/mnt/bulk/timlenz/tumpe/models/vit_conv_base-liver-fd-1912.pth"
+  #arch: vit
+  epochs: 420
+  gen_feats: False
+

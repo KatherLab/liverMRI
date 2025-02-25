@@ -1,0 +1,10 @@
+# liver preprocessing parameters:
+
+dcm_path: "/path/to/liver/data/"
+nr_test_patients: 750
+file_ending: "png"
+size: 224
+outdir: data/02_intermediate/liver-png-224
+ssl: False
+cores: 16
+crop: False
